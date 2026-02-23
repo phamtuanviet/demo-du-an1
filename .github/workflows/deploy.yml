@@ -32,7 +32,7 @@ jobs:
       - name: Build and Push API Gateway
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./ecom-core-nestjs
           push: true
           tags: ghcr.io/${{ github.repository }}/api-gateway:latest
           build-args: |
