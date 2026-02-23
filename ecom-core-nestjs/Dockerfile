@@ -23,5 +23,6 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/dist ./dist
 
 ARG SERVICE_NAME
+ENV SERVICE_NAME=$SERVICE_NAME
 
 CMD ["sh", "-c", "node dist/apps/$SERVICE_NAME/main.js"]
