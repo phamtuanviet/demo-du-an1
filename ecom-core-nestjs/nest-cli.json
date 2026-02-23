@@ -1,14 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/ecom-core-nestjs/src",
   "compilerOptions": {
     "deleteOutDir": true,
     "webpack": true,
-    "tsConfigPath": "apps/ecom-core-nestjs/tsconfig.app.json"
+    "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
   },
   "monorepo": true,
-  "root": "apps/ecom-core-nestjs",
+  "root": "apps/api-gateway",
+  "defaultProject": "api-gateway",
   "projects": {
     "api-gateway": {
       "type": "application",
@@ -35,15 +35,6 @@
       "sourceRoot": "apps/catalog-service/src",
       "compilerOptions": {
         "tsConfigPath": "apps/catalog-service/tsconfig.app.json"
-      }
-    },
-    "ecom-core-nestjs": {
-      "type": "application",
-      "root": "apps/ecom-core-nestjs",
-      "entryFile": "main",
-      "sourceRoot": "apps/ecom-core-nestjs/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/ecom-core-nestjs/tsconfig.app.json"
       }
     },
     "order-service": {
