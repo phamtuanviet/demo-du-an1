@@ -41,7 +41,7 @@ jobs:
       - name: Build and Push Auth Service
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./ecom-core-nestjs
           push: true
           tags: ghcr.io/${{ github.repository }}/auth-service:latest
           build-args: |
@@ -50,7 +50,7 @@ jobs:
       - name: Build and Push Catalog Service
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./ecom-core-nestjs
           push: true
           tags: ghcr.io/${{ github.repository }}/catalog-service:latest
           build-args: |
@@ -59,7 +59,7 @@ jobs:
       - name: Build and Push Order Service
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./ecom-core-nestjs
           push: true
           tags: ghcr.io/${{ github.repository }}/order-service:latest
           build-args: |
